@@ -89,7 +89,7 @@ if needed_dialog:
                 if word:
                     log(f"Found answer: {word}!")
                     await asyncio.sleep(3)
-                    await client.send_message(needed_dialog, word)
+                    await client.send_message(needed_dialog, word, reply_to=event.message.id)
                     log("Sent response with word")
                 else:
                     warn("No answer :(")
